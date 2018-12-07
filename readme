@@ -1,0 +1,30 @@
+This work extract the plugin feature from Clang into a standalone example.
+
+We have simplified this feature and integrated it into ROSE.
+https://en.wikibooks.org/wiki/ROSE_Compiler_Framework/Plugin
+
+#------------------------------
+version 1: orginal stripped version from Clang (C++11) 
+
+version 2: simplified version, merging two classes into one (C++11)
+
+version 3: eliminated C++11 to only use C++98
+
+A smallest example to mimic the plugin mechanism in CLANG/LLVM
+* merged ASTConsumer and FrontEndAction into a single class for simplicity
+* no argument parsing support.
+
+List of files
+* main.C   // main entry: specifying plugin .so file and action name
+* makefile
+* plugin.h   // plugin header file
+* plugin.C    // plugin source file
+* PrintNames.C // the user-provided plugin implementing preorder traverse of the tree, register the action
+
+#------------------------------
+To test a version
+ cd version{1|2|3}
+ make check
+
+To clean up, type:
+  make clean

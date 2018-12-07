@@ -1,0 +1,13 @@
+Smallest example to mimic the plugin mechanism in CLANG/LLVM
+* merged ASTConsumer and FrontEndAction into a single class for simplicity
+* no argument parsing support yet.
+
+List of files
+* main.C   // main entry: specifying plugin .so file and action name
+* makefile  
+* plugin.h   // plugin header file
+* plugin.C    // plugin source file
+* PrintNames.C // the user-provided plugin implementing preorder traverse of the tree, register the action
+
+To test it, type
+* make check
