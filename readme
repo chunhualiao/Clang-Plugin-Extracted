@@ -1,4 +1,4 @@
-This work extract the plugin feature from Clang into a standalone example.
+This work extracts the plugin feature from Clang into a standalone example.
 
 We have simplified this feature and integrated it into ROSE.
 https://en.wikibooks.org/wiki/ROSE_Compiler_Framework/Plugin
